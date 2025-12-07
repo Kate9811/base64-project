@@ -54,34 +54,9 @@ int main() {
     }
     std::cout << "\n\n";
 
-    // ДОПОЛНИТЕЛЬНЫЕ ТЕСТЫ
-    std::cout << "=== Дополнительные тесты ===\n\n";
-
-    // Тест с padding (из методички)
-    std::cout << "Тест с padding:\n";
-    std::cout << "   'QWJ=' -> '" << base64_decode("QWJ=") << "' (должно быть 'Ab')\n";
-    std::cout << "   'QW==' -> '" << base64_decode("QW==") << "' (должно быть 'A')\n";
-    std::cout << "   'QWJm' -> '" << base64_decode("QWJm") << "' (должно быть 'Abf')\n\n";
-
-    // Тест из методички (раздел 4.3.3)
-    std::cout << "Тест из методички (стр. 2-3):\n";
-    std::cout << "   'Abf' в Base64 должно быть 'QWJm'\n";
-    std::cout << "   Декодируем 'QWJm': " << base64_decode("QWJm") << "\n\n";
-
-    // ПРОВЕРКА ASCII ТАБЛИЦЫ
-    std::cout << "=== Проверка ASCII таблицы ===\n";
-    std::cout << "Коды из первого результата (" << result1 << "):\n";
-    for (char c : result1) {
-        print_ascii_char(static_cast<int>(c));
-    }
-
-    std::cout << "\n=== РЕЗУЛЬТАТЫ ДЛЯ ОТЧЕТА ===\n";
-    std::cout << "4. Pt54 -> " << result1 << "\n";
-    std::cout << "5. Rj0v -> " << result2 << "\n";
-    std::cout << "6. zbTM -> " << result3 << "\n";
-
-    std::cout << "\nНажмите Enter для выхода...";
-    std::cin.get();
+    
+    
 
     return 0;
+
 }
